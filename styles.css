@@ -1,0 +1,179 @@
+:root{
+    --techblue: rgb(1,20,75);
+    --greenblue: rgb(45, 149, 150);
+    --shadows: rgb(0,0,0,0.5);
+}
+@font-face {
+    font-family: HeadLineFont;
+    src: url(./fonts/LaserCorpsLaserItalic-7Bj4R.otf);
+}
+@font-face {
+    font-family: SeconderyHeadLines;
+    src: url(./fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: HeadLineName;
+    src: url(./fonts/vemka-7bv8d.ttf);
+}
+@font-face {
+    font-family: ps;
+    src: url(./fonts/Poppins-Light.ttf);
+}
+*{
+    /*border-style: solid;*/
+}
+/*general styling*/
+body{
+    color: whitesmoke;
+    text-shadow: 0.4vw 0.4vw 0.2vw var(--shadows);
+    font-family: ps;
+}
+#myVideo 
+{
+    position:fixed;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+h1
+{
+    font-family: HeadLineFont;
+}
+button
+{
+    text-align: center;
+    padding: 0.5vw 4vw;
+    font-family: SeconderyHeadLines;
+    font-size:2vw;
+    background-color: rgb(0,0,0,0);
+    /*background-image:linear-gradient(to bottom right, lightskyblue, var(--techblue));*/
+    color: whitesmoke;
+    border-radius: 10000000000000px;
+    border: solid;
+
+}
+.button:hover
+{
+    padding: 0.5vw 4.5vw;
+    color: lightblue;
+}
+.final_button
+{
+    padding: 1.5vw 5vw;
+}
+.final_button:hover
+{
+    padding: 1.5vw 5.5vw;
+    color: lightblue;
+}
+
+/*top*/
+.top 
+{
+    text-align: center; 
+}
+#headerName
+{
+    font-family: HeadLineName;
+    font-size: 3vw;
+    margin: 3%;
+}
+#headerMain
+{
+    margin: 15%;
+    font-size: 7.5vw;
+    padding: 3vw;
+}
+
+
+/*mid*/
+.header 
+{ 
+    grid-area: header;
+     font-size: 2.5vw;
+}
+.p1{ grid-area: p1;
+     text-align:left}
+.p2{ grid-area: p2;
+     text-align:right}
+.p3{ grid-area: p3;
+     text-align:left}
+.img1{ grid-area: img1;}
+.img2{ grid-area: img2;}
+.img3{ grid-area: img3;}
+
+.grid-container
+{
+    display: grid;
+    text-align: center;
+    gap: 10px;
+    grid-template-areas:
+    'header header header'
+    'p1 p1 img1'
+    'img2 p2 p2'
+    'p3 p3 img3' ;
+}
+@media only screen and (max-width: 600px) 
+{
+    .grid-container 
+    {
+        grid-template-areas:
+        'header'
+        'p1'
+        'img1'
+        'p2'
+        'img2'  
+        'p3'
+        'img3' ;
+    }
+    *, .p1, .p2, .p3
+    {
+        text-align: center;
+    }
+    /*these selectors might seem a bit odd because the selcetor is *, 
+    but for some reason, if I don't add the p classes, it won't align the buttons to the middle
+    when the screen shrinks and I couldn't find out why */
+   
+}
+.grid-container > div > p
+{
+    font-size: 1.5vw;
+}
+.grid-container > div > h2
+{
+    font-size: 6vw;
+    font-family: SeconderyHeadLines;
+}
+img
+{
+    width: 33vw;
+}
+
+/*bottom and final*/
+
+.bottom, .final
+{
+    text-align: center;
+    font-size: 1.5vw;
+}
+#bottomhead
+{
+    font-size: 4.5vw;
+}
+hr 
+{
+    border: dotted whitesmoke 5px;
+    border-bottom: none;
+    width: 15%;
+}
+
+.footer-links
+{
+    color:whitesmoke;
+    text-decoration: none;
+    margin: 2vw;
+}
+
+
+
